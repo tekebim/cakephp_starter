@@ -90,8 +90,6 @@ class QuotesController extends AppController
         // $e > pour ensemble
         $e = $this->Quotes->find()->where(['id' => $id]);
 
-        var_dump($e);
-
         // Si l'ensemble du résultat est vide, on retourne un plantage
         if($e->isEmpty()){
             $this->Flash->error('Citation introuvable');
@@ -101,5 +99,16 @@ class QuotesController extends AppController
         // On passe le premier element de l'ensemble dans la vue
         $firstElement = $e->first();
         $this->set('elmt', $firstElement);
+
+        // Si on a recu le formulaire de modif ( si on est en post ou put )
+        if($this->request->is(['post', 'put'])) {
+            $this->Quotes->patchEntity($firstElement, $this->request->getData());
+            // Test de sauvegarde
+            if($this->Quotes->save($firstElement)){
+                $this->Flash->success('Modification ok');
+                return $this->redirect(['action' => 'view', $id]);
+            }
+            $this->Flash->error('Modification plantée');
+        }
     }
 }
