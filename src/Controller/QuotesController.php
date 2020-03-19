@@ -43,6 +43,23 @@ class QuotesController extends AppController
         // On creer une entite vide, qu on va transmettre a notre vue
         $new = $this->Quotes->newEntity();
 
+        // Si on est en methode post
+        if($this->request->is('post')){
+            // On fait l enregistrement
+            // On recupere le contenu des elements du formulaire pour les placer dans l'entité vide
+            $new = $this->Quotes->patchEntity($new, $this->request->getData());
+
+            // Si l enregistrement peut se faire
+            if($this->Quotes->save($new)){
+                // On creer un message de succes
+                $this->Flash->success('Ok, citation enregistrée');
+                // On redirige vers la liste global des citations
+                return $this->redirect(['action' => 'index']);
+            }
+            // Message de plantage
+            $this->Flash->error('plante');
+        }
+
         // $this->set('new', $new);
         // equivalent en compact ( car la varible transmise aura le meme nom que celle du controller )
         $this->set(compact('new'));

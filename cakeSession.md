@@ -40,3 +40,11 @@ $ $this->Html->link('voir la fiche', ['action' => 'view'])
 > création d'un formulaire au travers d'une méthode Form de CakePHP
 `$this->Form->create()
 $this->Form->end()`
+
+
+# Liste des methodes en API Rest
+get
+post
+put
+patch
+delete
