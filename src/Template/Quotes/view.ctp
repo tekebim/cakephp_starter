@@ -11,5 +11,8 @@
 <p>Created: <?= $quote->created ?></p>
 <p>Modified: <?= $quote->modified ?></p>
 
+<p>
+    <?= $this->Form->postLink('Supprimer cette citation', ['action' => 'delete', $quote->id]); ?>
+</p>
 
-<?= $this->Html->link('retour à la liste', ['action' => 'index']); ?>
+<?= $this->Html->link('Retour à la liste', ['action' => 'index']); ?>

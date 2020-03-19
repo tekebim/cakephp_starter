@@ -9,7 +9,7 @@ if ($list->count() == 0) {
 } else {
     echo '<ul>';
     foreach ($list as $key => $value) {
-        echo '<li>' . $value->content . ''. $this->html->link('voir la fiche', ['action' => 'view', $value->id ]).'</li>';
+        echo '<li>' . $value->content . ' ' . $this->html->link('voir la fiche', ['action' => 'view', $value->id]) . '</li>';
     }
     echo '</ul>';
 }

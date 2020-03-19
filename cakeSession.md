@@ -43,8 +43,16 @@ $this->Form->end()`
 
 
 # Liste des methodes en API Rest
-get
-post
-put
-patch
-delete
+- get
+- post
+- put
+- patch
+- delete
+
+
+# PostLink
+Lien pour protéger les boutons ( différent des links accessibles normalement pour les visiteurs )
+`$this->Form->postLink()`
+
+Tester l'erreur de la methode delete via la methode get
+`http://../quotes/delete/3`
