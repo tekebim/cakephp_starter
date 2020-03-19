@@ -7,7 +7,8 @@
 
 <?= $this->Form->create($new) ?>
 <?= $this->Form->control('content') ?>
-
+<?= $this->Form->control('author') ?>
+<?= $this->Form->button('Ajouter') ?>
 <?php
 // fin du formulaire
 ?>
