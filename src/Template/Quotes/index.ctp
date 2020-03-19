@@ -6,11 +6,10 @@
 // On compte le nombre d'éléments dans la liste
 if ($list->count() == 0) {
     echo '<p>Désolé il n\'y a pas de contenu</p>';
-}
-else {
+} else {
     echo '<ul>';
     foreach ($list as $key => $value) {
-        echo '<li>'.$value->content.'</li>';
+        echo '<li>' . $value->content . ''. $this->html->link('voir la fiche', ['action' => 'view', $value->id ]).'</li>';
     }
     echo '</ul>';
 }

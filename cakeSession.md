@@ -33,5 +33,6 @@ Controller/QuotesController.php
 
 > création d'une méthode index
 
-
-
+> création lien
+Utilisation d'un helper (link) qui prend deux params ( nom, [lien : nom de l'action => param ])
+$ $this->Html->link('voir la fiche', ['action' => 'view'])

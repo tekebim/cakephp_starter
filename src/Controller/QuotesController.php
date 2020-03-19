@@ -29,6 +29,12 @@ class QuotesController extends AppController
         $list = $this->Quotes->find();
         // envoi les infos à la vue
         $this->set('list', $list);
+    }
 
+    // action view qui prend un parametre, pour recuperer les infos d'un id en particulier
+    public function view($id) {
+        // methode get / plutot que find()->where() ...
+        $quote = $this->Quotes->get($id);
+        $this->set('quote', $quote);
     }
 }
