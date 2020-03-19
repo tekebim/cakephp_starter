@@ -30,3 +30,8 @@ Controller/QuotesController.php
 
 > créer la vue
 ` src/Template/Quotes/hello.ctp`
+
+> création d'une méthode index
+
+
+

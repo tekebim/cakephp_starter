@@ -47,3 +47,6 @@ ALTER TABLE `quotes`
 --
 ALTER TABLE `quotes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+
+INSERT INTO `quotes` (`id`, `created`, `modified`, `content`, `author`) VALUES (NULL, NOW(), NOW(), 'first citation', 'guttenberg'), (NULL, NOW(), NOW(), 'Lorem ipsum', NULL)
