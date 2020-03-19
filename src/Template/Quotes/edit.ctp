@@ -1,6 +1,6 @@
 <?php // src/Template/Quotes/edit.ctp ?>
 
-<?php var_dump($elmt); ?>
+<?php // var_dump($elmt); ?>
 
 <?= $this->Form->create($elmt) ?>
     <?= $this->Form->control('content') ?>
