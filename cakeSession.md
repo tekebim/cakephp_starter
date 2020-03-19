@@ -56,3 +56,12 @@ Lien pour protéger les boutons ( différent des links accessibles normalement p
 
 Tester l'erreur de la methode delete via la methode get
 `http://../quotes/delete/3`
+
+Tester les données dans le Model/QuotesTable.php
+
+# Règles de validation
+validationDefault(Validator $validator)
+`
+$v->notEmpty('content');
+$v->allowEmpty('author')->maxLength('author', 30);
+`

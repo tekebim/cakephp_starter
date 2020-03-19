@@ -4,6 +4,7 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
+use Cake\Validation\Validator;
 
 class QuotesTable extends Table
 {
@@ -11,6 +12,13 @@ class QuotesTable extends Table
     {
         // permet que l'app gere toute seule les champs created et modified
         $this->addBehavior('Timestamp');
-        // parent::initialize($config);
+    }
+
+    public function validationDefault(Validator $v)
+    {
+        $v->notEmpty('content');
+        $v->allowEmpty('author')->maxLength('author', 30);
+
+        return $v;
     }
 }
