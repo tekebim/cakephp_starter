@@ -36,3 +36,7 @@ Controller/QuotesController.php
 > création lien
 Utilisation d'un helper (link) qui prend deux params ( nom, [lien : nom de l'action => param ])
 $ $this->Html->link('voir la fiche', ['action' => 'view'])
+
+> création d'un formulaire au travers d'une méthode Form de CakePHP
+`$this->Form->create()
+$this->Form->end()`

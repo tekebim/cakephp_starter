@@ -37,4 +37,14 @@ class QuotesController extends AppController
         $quote = $this->Quotes->get($id);
         $this->set('quote', $quote);
     }
+
+    // action pour creer un nouveau
+    public function new() {
+        // On creer une entite vide, qu on va transmettre a notre vue
+        $new = $this->Quotes->newEntity();
+
+        // $this->set('new', $new);
+        // equivalent en compact ( car la varible transmise aura le meme nom que celle du controller )
+        $this->set(compact('new'));
+    }
 }
