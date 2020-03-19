@@ -65,3 +65,8 @@ validationDefault(Validator $validator)
 $v->notEmpty('content');
 $v->allowEmpty('author')->maxLength('author', 30);
 `
+
+# Format des dates / heures en FR
+i18nFormat()
+
+

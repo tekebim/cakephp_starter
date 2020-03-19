@@ -8,7 +8,7 @@
 <p>Id: <?= $quote->id ?></p>
 <p>Content: <?= $quote->content ?></p>
 <p>Author: <?= $quote->author ?></p>
-<p>Created: <?= $quote->created ?></p>
+<p>Created: <?= $quote->created->i18nFormat('dd/MM/yyy HH:mm:ss') ?></p>
 <p>Modified: <?= $quote->modified ?></p>
 
 <p>
