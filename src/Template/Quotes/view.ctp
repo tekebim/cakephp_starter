@@ -14,5 +14,9 @@
 <p>
     <?= $this->Form->postLink('Supprimer cette citation', ['action' => 'delete', $quote->id]); ?>
 </p>
-
-<?= $this->Html->link('Retour à la liste', ['action' => 'index']); ?>
+<p>
+    <?= $this->Html->link('Modifier la citation', ['action' => 'edit', $quote->id]); ?>
+</p>
+<p>
+    <?= $this->Html->link('Retour à la liste', ['action' => 'index']); ?>
+</p>

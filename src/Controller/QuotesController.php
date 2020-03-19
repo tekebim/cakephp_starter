@@ -83,4 +83,23 @@ class QuotesController extends AppController
         $this->Flash->error('Suppression plantée');
         return $this->redirect(['action' => 'view', $id]);
     }
+
+    // action edit / update
+    public function edit($id) {
+        // On recupère les données liées à l'ID
+        // $e > pour ensemble
+        $e = $this->Quotes->find()->where(['id' => $id]);
+
+        var_dump($e);
+
+        // Si l'ensemble du résultat est vide, on retourne un plantage
+        if($e->isEmpty()){
+            $this->Flash->error('Citation introuvable');
+            return $this->redirect(['action' => 'index']);
+        }
+
+        // On passe le premier element de l'ensemble dans la vue
+        $firstElement = $e->first();
+        $this->set('elmt', $firstElement);
+    }
 }
