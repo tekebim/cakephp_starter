@@ -6,11 +6,11 @@
 ?>
 
 <?= $this->Form->create($new) ?>
-<?= $this->Form->control('content') ?>
-<?= $this->Form->control('author') ?>
-<?= $this->Form->button('Ajouter') ?>
+    <?= $this->Form->control('content') ?>
+    <?= $this->Form->control('author') ?>
+    <?= $this->Form->button('Ajouter') ?>
+<?= $this->Form->end() ?>
+
 <?php
 // fin du formulaire
 ?>
-
-<?= $this->Form->end() ?>
